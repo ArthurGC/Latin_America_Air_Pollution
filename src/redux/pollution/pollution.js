@@ -1,4 +1,4 @@
-import getInitialPollution from './getInitialPollution';
+import getInitialPollution from '../../services/getInitialPollution';
 
 // Initial State
 const initialState = [];
