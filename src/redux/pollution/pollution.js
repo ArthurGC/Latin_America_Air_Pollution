@@ -1,3 +1,5 @@
+import getInitialPollution from './getInitialPollution';
+
 // Initial State
 const initialState = [];
 
