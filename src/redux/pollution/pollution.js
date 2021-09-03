@@ -5,9 +5,11 @@ const initialState = [];
 
 // Actions
 const INIT_POLLUTION = 'air_pollution/pollution/INIT_POLLUTION';
+const INIT_FETCHING = 'air_pollution/pollution/INIT_FETCHING';
 
 // Action Creators
 export const addInitialPollution = () => async (dispatch) => {
+  dispatch({ type: INIT_FETCHING });
   const pollution = await getInitialPollution();
   dispatch({
     type: INIT_POLLUTION,
