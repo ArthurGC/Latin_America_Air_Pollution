@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const Country = ({ name, air }) => (
-  <Link to="/country">
+  <Link to={`/${name}`}>
     <div>
       <img src={require(`../../assets/${name}.png`).default} alt={`${name}'s map`} />
     </div>
@@ -16,7 +16,7 @@ const Country = ({ name, air }) => (
 
 Country.propTypes = {
   name: PropTypes.string.isRequired,
-  air: PropTypes.number.isRequired,
+  air: PropTypes.string.isRequired,
 };
 
 export default Country;
