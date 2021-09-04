@@ -4,8 +4,7 @@ import getInitialPollution from '../../services/getInitialPollution';
 const initialState = [];
 
 // Actions
-const INIT_POLLUTION = 'air_pollution/pollution/INIT_POLLUTION';
-// const INIT_FETCHING = 'air_pollution/pollution/INIT_FETCHING';
+export const INIT_POLLUTION = 'air_pollution/pollution/INIT_POLLUTION';
 
 // Action Creators
 export const addInitialPollution = () => async (dispatch) => {
