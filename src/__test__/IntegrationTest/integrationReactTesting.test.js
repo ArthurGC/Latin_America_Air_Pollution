@@ -9,8 +9,9 @@ import store from '../../redux/configureStore';
 
 jest.mock('../../services/getInitialPollution');
 
-test('We show a list of posts', async () => {
-  // highlight-start
+describe('Test Integration with React Testing Library', () => {
+  // Arrange
+  // Act
   const posts = [{
     name: 'Peru',
     air: '1',
@@ -43,16 +44,18 @@ test('We show a list of posts', async () => {
   },
   ];
 
-  refactorData.mockResolvedValueOnce(posts);
-  // highlight-end
-  render(
-    <Provider store={store}>
-      <App />
-    </Provider>,
-  );
-  await waitFor(() => {
-    expect(screen.getAllByTestId('countryTitle').length).toBe(2);
-    expect(screen.getAllByTestId('countryAirQuality').length).toBe(2);
+  // Assert
+  test('Should render a list of country with title and air quality values', async () => {
+    refactorData.mockResolvedValueOnce(posts);
+    render(
+      <Provider store={store}>
+        <App />
+      </Provider>,
+    );
+    await waitFor(() => {
+      expect(screen.getAllByTestId('countryTitle').length).toBe(2);
+      expect(screen.getAllByTestId('countryAirQuality').length).toBe(2);
+    });
+    posts.forEach((post) => expect(screen.getByText(post.name)).toBeInTheDocument());
   });
-  posts.forEach((post) => expect(screen.getByText(post.name)).toBeInTheDocument());
 });

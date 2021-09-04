@@ -2,6 +2,8 @@ import moxios from 'moxios';
 import testStore, { fetchPollution } from '../../Util/mockStore';
 
 describe('addInitialPollution action', () => {
+  // Arrange
+  // Act
   beforeEach(() => {
     moxios.install();
   });
@@ -10,6 +12,7 @@ describe('addInitialPollution action', () => {
     moxios.uninstall();
   });
 
+  // Assert
   test('Store is updated correctly', () => {
     const expectedState = [{
       name: 'Peru',
