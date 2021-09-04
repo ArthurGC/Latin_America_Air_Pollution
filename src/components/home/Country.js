@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 
 const Country = ({ name, air }) => (
   <Link to={`/${name}`}>
-    <div>
+    <div data-testid="countryCategory">
       <img src={require(`../../assets/${name}.png`).default} alt={`${name}'s map`} />
     </div>
-    <h2>{name}</h2>
-    <p>{air}</p>
+    <h2 data-testid="countryTitle">{name}</h2>
+    <p data-testid="countryAirQuality">{air}</p>
   </Link>
 );
 
