@@ -1,4 +1,4 @@
-import getInitialPollution from '../../services/getInitialPollution';
+import getInitialPollution, { refactorData } from '../../services/getInitialPollution';
 
 // Initial State
 const initialState = [];
@@ -9,9 +9,10 @@ export const INIT_POLLUTION = 'air_pollution/pollution/INIT_POLLUTION';
 // Action Creators
 export const addInitialPollution = () => async (dispatch) => {
   const pollution = await getInitialPollution();
+  const pollutionData = await refactorData(pollution);
   dispatch({
     type: INIT_POLLUTION,
-    payload: pollution,
+    payload: pollutionData,
   });
 };
 
@@ -19,7 +20,7 @@ export const addInitialPollution = () => async (dispatch) => {
 const pollutionReducer = (state = initialState, action) => {
   switch (action.type) {
     case INIT_POLLUTION:
-      return [...action.payload];
+      return action.payload;
 
     default:
       return state;
