@@ -11,6 +11,7 @@ const MainCountry = () => {
           key={country.id}
           name={country.name}
           air={country.air}
+          data-testid="row"
         />
       ))}
     </div>
