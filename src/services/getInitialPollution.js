@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { v4 as uuidv4 } from 'uuid';
 
 const baseURL = 'http://api.openweathermap.org/data/2.5/air_pollution?';
 
@@ -56,20 +55,24 @@ export const latinCountriesLatLong = [
   },
 ];
 
-const getInitialPollution = async () => {
-  const pollution = [];
-  for (let i = 0; i < latinCountriesLatLong.length; i += 1) {
-    const country = latinCountriesLatLong[i];
-    // eslint-disable-next-line no-await-in-loop
-    const response = await axios.get(`${baseURL}lat=${country.latitude}&lon=${country.longitude}&appid=4138d7a8121dd6bb5e48faf547cf65cd`);
-    pollution.push({
-      name: `${country.country}`,
-      air: `${response.data.list[0].main.aqi}`,
-      components: response.data.list[0].components,
-      id: uuidv4(),
-    });
-  }
+export const refactorData = (data) => {
+  const pollution = latinCountriesLatLong.map((country, index) => ({
+    name: `${country.country}`,
+    air: `${data[index].list[0].main.aqi}`,
+    components: data[index].list[0].components,
+    id: `${index}`,
+  }));
   return pollution;
+};
+
+const getInitialPollution = async () => {
+  const results = latinCountriesLatLong.map(async (country) => {
+    const response = await axios.get(`${baseURL}lat=${country.latitude}&lon=${country.longitude}&appid=4138d7a8121dd6bb5e48faf547cf65cd`);
+    return response.data;
+  });
+
+  const finalData = await Promise.all(results);
+  return finalData;
 };
 
 export default getInitialPollution;
