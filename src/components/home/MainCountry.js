@@ -5,7 +5,7 @@ import Country from './Country';
 const MainCountry = () => {
   const countries = useSelector((state) => state.pollution);
   return (
-    <div>
+    <div className="container mx-auto grid grid-cols-2">
       {countries.map((country) => (
         <Country
           key={country.id}
