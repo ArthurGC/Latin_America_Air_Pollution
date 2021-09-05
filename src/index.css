@@ -1,4 +1,10 @@
-/* ./src/index.css */
+@import url('./assets/fonts/stylesheet.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* .title {
+    @apply font-gill text-2xl;
+} */

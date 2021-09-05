@@ -5,7 +5,7 @@ import MainCountry from './MainCountry';
 const HomePage = () => (
   <>
     <Headline />
-    <h2>Air Pollution by Country</h2>
+    <h2 className="font-prox font-normal">Air Pollution by Country</h2>
     <MainCountry />
   </>
 );
