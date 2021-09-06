@@ -5,6 +5,31 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .title {
-    @apply font-gill text-2xl;
-} */
+#root {
+    position: relative;
+}
+.row:nth-child(even) {
+    background-color: #D05178;
+}
+
+.country:nth-child(2),
+.country:nth-child(3),
+.country:nth-child(6),
+.country:nth-child(7),
+.country:nth-child(10)   {
+    background-color: #D05178;
+}
+
+header {
+    background-color: #E35A8A;
+}
+
+@media (min-width: 1024px) {
+    .country:nth-child(odd) {
+        background-color: #E35A8A;
+    }
+    .country:nth-child(even) {
+        background-color: #D05178;
+    }
+}
+
