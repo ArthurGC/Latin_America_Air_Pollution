@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
-import { Provider } from 'react-redux';// highlight-line
+import { Provider } from 'react-redux';
 import App from '../../components/App';
 import '@testing-library/jest-dom/extend-expect';
 import { refactorData } from '../../services/getInitialPollution';

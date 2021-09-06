@@ -10,7 +10,11 @@ In this project, I set up my Metrics WebApp project. It is a mobile web applicat
 
 ## :red_circle: Live Demo
 
-- [Preview Link](https://latinamerica-air-pollution.netlify.app/#/)
+- [Preview Deploy Link](https://latinamerica-air-pollution.netlify.app/#/)
+
+## :red_circle: Video Live Preview
+
+- [Preview Video Link](https://www.loom.com/share/a8ad02be19304fcf906fe1e856caa14e)
 ## :hammer: Built With
 
 - REACT and REDUX.
