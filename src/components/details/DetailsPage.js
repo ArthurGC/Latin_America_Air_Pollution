@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const DetailsPage = ({ name, air, components }) => (
   <div className="bg-dribble py-1 min-h-screen">
     <div className="">
-      <div className="bg-head py-4 sm:px-10 lg:px-20 sm:py-8 md:py-10">
+      <div className="bg-head py-4 sm:px-10 md:pt-20 lg:px-20 sm:py-8 md:py-10 pt-14 sm:pt-16 md:pt-20 lg:pt-24">
         <h2 className="font-lato font-black text-xl lg:text-2xl text-white text-center uppercase">{name}</h2>
         <p className="font-lato font-normal text-base lg:text-lg text-white text-center">{`Air quality index: ${air}`}</p>
       </div>
