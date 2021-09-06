@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const Country = ({ name, air }) => (
-  <Link to={`/${name}`} className="bg-dribble flex flex-col items-center gap-4 px-4 py-2">
+  <Link to={`/${name}`} className="bg-dribble flex flex-col items-center gap-4 px-4 py-2 country">
     <div data-testid="countryCategory" className="">
       <img src={require(`../../assets/${name}.png`).default} alt={`${name}'s map`} className="opacity-30 max-h-20" />
     </div>
