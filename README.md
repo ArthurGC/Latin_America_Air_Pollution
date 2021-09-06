@@ -59,6 +59,8 @@ Feel free to check the [issues page](https://github.com/ArthurGC/Latin_America_A
 ## :grey_exclamation: Acknowledgments
 
 - [Microverse](https://www.microverse.org/)
+- [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
+- [Design Guideline](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
 
 ## 📝 License
 
