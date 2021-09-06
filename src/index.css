@@ -1,35 +1,47 @@
-@import url('./assets/fonts/stylesheet.css');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import url("./assets/fonts/stylesheet.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
+/* stylelint-disable */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* stylelint-enable */
 
 #root {
-    position: relative;
+  position: relative;
 }
+
+.country {
+  border: 1px solid transparent;
+}
+
 .row:nth-child(even) {
-    background-color: #D05178;
+  background-color: #d05178;
 }
 
 .country:nth-child(2),
 .country:nth-child(3),
 .country:nth-child(6),
 .country:nth-child(7),
-.country:nth-child(10)   {
-    background-color: #D05178;
+.country:nth-child(10) {
+  background-color: #d05178;
 }
 
 header {
-    background-color: #E35A8A;
+  background-color: #e35a8a;
 }
 
 @media (min-width: 1024px) {
-    .country:nth-child(odd) {
-        background-color: #E35A8A;
-    }
-    .country:nth-child(even) {
-        background-color: #D05178;
-    }
+  .country:nth-child(odd) {
+    background-color: #e35a8a;
+  }
+
+  .country:nth-child(even) {
+    background-color: #d05178;
+  }
 }
 
+.country:hover {
+  box-sizing: border-box;
+  border: 1px solid white;
+}
