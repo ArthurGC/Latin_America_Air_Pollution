@@ -6,7 +6,7 @@ In this project, I set up my Metrics WebApp project. It is a mobile web applicat
 
 ## Screenshot
 
-![Bookstore Preview](src/Assets/Bookstore_preview_2.png)
+![Latin America's Air Pollution Preview](src/assets/preview.png)
 
 ## :red_circle: Live Demo
 
