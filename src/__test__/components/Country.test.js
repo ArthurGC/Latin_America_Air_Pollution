@@ -44,6 +44,6 @@ describe('Test Country component', () => {
 
   test('Should render a air quality value', () => {
     const { getByText } = component;
-    expect(getByText('5')).toBeInTheDocument();
+    expect(getByText('AQI: 5')).toBeInTheDocument();
   });
 });

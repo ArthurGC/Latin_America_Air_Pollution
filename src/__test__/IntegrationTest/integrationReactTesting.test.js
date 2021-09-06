@@ -56,6 +56,7 @@ describe('Test Integration with React Testing Library', () => {
       expect(screen.getAllByTestId('countryTitle').length).toBe(2);
       expect(screen.getAllByTestId('countryAirQuality').length).toBe(2);
     });
+
     posts.forEach((post) => expect(screen.getByText(post.name)).toBeInTheDocument());
   });
 });

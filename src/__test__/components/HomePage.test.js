@@ -17,6 +17,6 @@ describe('Test Home component', () => {
 
   // Assert
   test('Testing Home component render', () => {
-    component.getByText('Air Pollution by Country');
+    component.getByText('Air Pollution by Country:');
   });
 });
