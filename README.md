@@ -10,7 +10,7 @@ In this project, I set up my Metrics WebApp project. It is a mobile web applicat
 
 ## :red_circle: Live Demo
 
-- [Preview Link](https://arthurgc.github.io/Bookstore_CMS/)
+- [Preview Link](https://latinamerica-air-pollution.netlify.app/#/)
 ## :hammer: Built With
 
 - REACT and REDUX.
