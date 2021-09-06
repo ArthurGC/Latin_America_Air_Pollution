@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'http://api.openweathermap.org/data/2.5/air_pollution?';
+const baseURL = 'https://api.openweathermap.org/data/2.5/air_pollution?';
 
 export const latinCountriesLatLong = [
   {
