@@ -11,7 +11,7 @@ import NotMatch from './home/NotMatch';
 import DetailsPage from './details/DetailsPage';
 
 const App = () => {
-  const countries = useSelector((state) => state.pollution);
+  const countries = useSelector((state) => state.pollution.filtered);
 
   return (
     <Router>
