@@ -14,7 +14,7 @@ In this project, I set up my Metrics WebApp project. It is a mobile web applicat
 
 ## :red_circle: Video Live Preview
 
-- [Preview Video Link](https://www.loom.com/share/a8ad02be19304fcf906fe1e856caa14e)
+- [Preview Video Link](https://www.loom.com/share/ec2c267b1c5a492a86771460763c7a1f)
 ## :hammer: Built With
 
 - REACT and REDUX.
