@@ -34,11 +34,11 @@ describe('Test pollutionReducer', () => {
   // Assert
   test('Should return default state', () => {
     const newState = pollutionReducer(state, {});
-    expect(newState).toEqual([]);
+    expect(newState).toEqual({ countries: [], filtered: [], selectStatus: 'All' });
   });
 
   test('Should return a state if receiving a type', () => {
     const newState = pollutionReducer(state, action);
-    expect(newState).toEqual([...action.payload]);
+    expect(newState).toEqual({ countries: [...action.payload], filtered: [...action.payload], selectStatus: 'All' });
   });
 });

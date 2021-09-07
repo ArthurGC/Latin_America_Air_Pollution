@@ -49,7 +49,7 @@ describe('addInitialPollution action', () => {
     return store.dispatch(fetchPollution())
       .then(() => {
         const newState = store.getState();
-        expect(newState.pollution).toEqual(expectedState);
+        expect(newState.pollution.countries).toEqual(expectedState);
       });
   });
 });
