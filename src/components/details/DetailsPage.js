@@ -1,8 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
+
+const detailsPageVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+  exit: {
+    x: '100vw',
+    transition: {
+      ease: 'easeInOut',
+    },
+  },
+};
 
 const DetailsPage = ({ name, air, components }) => (
-  <div className="bg-dribble py-1 min-h-screen">
+  <motion.div
+    className="bg-dribble py-1 min-h-screen"
+    variants={detailsPageVariants}
+    initial="hidden"
+    animate="visible"
+    exit="exit"
+  >
     <div className="">
       <div className="bg-head py-4 sm:px-10 md:pt-20 lg:px-20 sm:py-8 md:py-10 pt-14 sm:pt-16 md:pt-20 lg:pt-24">
         <h2 className="font-lato font-black text-xl lg:text-2xl text-white text-center uppercase">{name}</h2>
@@ -44,7 +69,7 @@ const DetailsPage = ({ name, air, components }) => (
         </li>
       </ul>
     </div>
-  </div>
+  </motion.div>
 );
 
 DetailsPage.propTypes = {
