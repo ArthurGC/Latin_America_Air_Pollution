@@ -1,5 +1,8 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
+import {
+  HashRouter as Router,
+} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import App from '../../components/App';
 import '@testing-library/jest-dom/extend-expect';
@@ -49,7 +52,9 @@ describe('Test Integration with React Testing Library', () => {
     refactorData.mockResolvedValueOnce(posts);
     render(
       <Provider store={store}>
-        <App />
+        <Router>
+          <App />
+        </Router>
       </Provider>,
     );
     await waitFor(() => {
